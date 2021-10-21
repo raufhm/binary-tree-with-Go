@@ -1,4 +1,4 @@
-# binary-search-tree
+# binary-tree implementation using _*go.*_
 ```
 Hi, bro! 
 
