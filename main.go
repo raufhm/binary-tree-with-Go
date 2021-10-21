@@ -62,6 +62,7 @@ func main() {
 	// search the data
 	searchData := []int{75, 69, 90}
 	fmt.Println(line)
+	
 	for _, data := range searchData {
 		found := tree.Search(data)
 		strData := strconv.Itoa(data)
