@@ -56,13 +56,13 @@ func main() {
 	}
 	line := "==========================================================================="
 	fmt.Println(line)
-	listData := fmt.Sprintf("this is the parent and child data --> %v", parentChildData)
+	listData := fmt.Sprintf("this is the root data [%v],\nthis is parent and child data %v", tree.Key, parentChildData)
 	fmt.Println(listData)
 
 	// search the data
 	searchData := []int{75, 69, 90}
 	fmt.Println(line)
-	
+
 	for _, data := range searchData {
 		found := tree.Search(data)
 		strData := strconv.Itoa(data)
