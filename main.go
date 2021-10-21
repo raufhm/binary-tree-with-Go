@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strconv"
+)
 
 // Component of Tree
 type Node struct {
@@ -47,17 +50,27 @@ func main() {
 	tree := &Node{Key: 100} // Initialize root value
 
 	// insert parent and child value
-	tree.Insert(120)
-	tree.Insert(20)
-	tree.Insert(84)
-	tree.Insert(300)
-	tree.Insert(623)
-	tree.Insert(10)
-	tree.Insert(70)
-	tree.Insert(90)
+	parentChildData := []int{90, 10, 200, 300, 350, 40, 34, 67, 121, 69}
+	for _, data := range parentChildData {
+		tree.Insert(data)
+	}
+	line := "==========================================================================="
+	fmt.Println(line)
+	listData := fmt.Sprintf("this is the parent and child data --> %v", parentChildData)
+	fmt.Println(listData)
 
 	// search the data
-	fmt.Println(tree.Search(700))
-	fmt.Println(tree.Search(120))
-	fmt.Println(tree.Search(100))
+	searchData := []int{75, 69, 90}
+	fmt.Println(line)
+	for _, data := range searchData {
+		found := tree.Search(data)
+		strData := strconv.Itoa(data)
+		if !found {
+			result := fmt.Sprintf("is %s exist ? No, %s is not exist 😭", strData, strData)
+			fmt.Println(result)
+		} else {
+			result := fmt.Sprintf("is %s exist ? Yes, %s is exist 😍", strData, strData)
+			fmt.Println(result)
+		}
+	}
 }
