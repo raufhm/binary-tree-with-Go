@@ -1,7 +1,9 @@
 # binary-search-tree
 ```
 Hi, bro! 
-this is a simple implementation of binary tree using *Golang.*
-you can try on your local machine and understand the flow.
-and, happy coding 😊
+
+this is a simple and quick implementation of binary tree using *Golang.*
+here you may try to understand the flow and structure of how to do **insert and search**.
+
+lastly, happy coding ☕
 ```
